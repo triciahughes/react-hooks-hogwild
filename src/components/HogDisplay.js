@@ -1,12 +1,11 @@
-import HogData from "./HogData";
+import HogTile from "./HogTile";
 
 function HogDisplay({ hogs }) {
   const displayHogs = hogs.map((hog) => {
-    //console.log(hog.name, hog.image);
-    return <HogData name={hog.name} image={hog.image} />;
+    return <HogTile key={hog.id} name={hog.name} image={hog.image} />;
   });
 
-  return <div>{displayHogs}</div>;
+  return <div className="ui eight wide column">{displayHogs}</div>;
 }
 
 export default HogDisplay;
